@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Impacts Of Covid Homepage</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   </head>
+
+   <body>
+      <nav>
+         <div class="logo">
+            Monroe Times
+         </div>
+         <input type="checkbox" id="click" class="menu_Checkbox">
+         <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+         </label>
+         <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="Business/index.html">Business</a></li>
+            <li><a href="Economy/index.html">Economy</a></li>
+            <li><a href="Education/index.html">Education</a></li>
+            <li><a href="Citizens/index.html">Citizens</a></li>
+         </ul>
+      </nav>
+
+      <div>
+         <h1 class="title">The Impacts Of Covid-19</h1>
+         <picture>
+            <img src="assets/images/main.jpeg" alt="The Impacts Of A Major Disease" class="responsive">
+         </picture>
+      </div>
+
+      <form action="Subsc.php" method="post">
+         <div class="containerSub">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>If you liked this article consider subscribing to our Newsletter to receive our recent articles directly from your email</p>
+         </div>
+         <div class="containerSub" style="background-color:white">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" name="email" required>
+            <label>
+               <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+            </label>
+         </div>
+         <div class="containerSub">
+            <input type="submit" value="Subscribe">
+         </div>
+      </form>
+
+      <footer>
+         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+         <script>
+            // Get the button
+            let mybutton = document.getElementById("myBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+         </script>
+         
+         <div class="Home">
+            <ul>
+               <li class="SecretLink"><a href="../../140_Homepage/index.html">Back To 140 Homepage</a></li>
+               <li class="SecretLink"><a href="Citations_Synopsis/index.html">Citations & Synopsis</a></li>
+            </ul>
+         </div>
+      </footer>
+   </body>
+</html>

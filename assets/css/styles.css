@@ -1,0 +1,836 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* Nav Bar Styling Code */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+.menu_Checkbox {
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+/* END OF Nav Bar Styling Code */
+/* Back To Top Styling Code */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+/* END OF Back To Top Styling Code */
+
+
+/* News Letter */
+/* Style the form element with a border around it */
+form {
+  border: 4px solid #f1f1f1;
+  padding-bottom: 30px;
+}
+/* Add some padding and a grey background color to containers */
+.containerSub {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+/* Add margins to the checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
+}
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+}
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+/* End Of New Letter */
+
+
+/* Homepage Styling Code */
+h1 {
+  font-size: 28px;
+  text-align: center;
+  color: black;
+  padding-top: 10px;  
+}
+h2 {
+  font-size: 24px;
+  text-align: center;
+  color: black;
+  padding-top: 10px;  
+}
+@media (max-width: 1600px){
+  .responsive {
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  footer {
+    padding-top: 25px;
+    background-color: #111;
+  }
+}
+@media (max-width: 920px) {
+  .responsive {
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  footer {
+    padding-top: 25px;
+    background-color: #111;
+  }
+}
+body {
+  max-width: 100%;
+  max-height: 100%;
+}
+.Home li {
+  padding-left: 25px;
+  padding-bottom: 20px;
+}
+.articles{
+  padding-bottom: 0px;
+}
+/* END OF Body Styling Code */
+
+
+
+/* Citizen */
+@media (max-width: 1367px){
+  .intro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .intro img {
+    width: 98%;
+    padding-bottom: 10px;
+  }
+  .intro p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .jobs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .jobs img {
+    width: 98%;
+    padding-bottom: 10px;
+  }
+  .jobs p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .events {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .events img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .events p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .family {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .family img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .family p {
+    margin-left: 1em;
+    font-size: 20px;
+  }
+  .masks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .masks img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .masks p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+}
+@media (max-width: 2500px){
+  .intro {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .intro img {
+    max-width: 40%;
+    padding-bottom: 10px;
+  }
+  .intro p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .jobs {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .jobs img {
+    max-width: 23%;
+    padding-bottom: 10px;
+  }
+  .jobs p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .events {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .events img {
+    max-width: 30%;
+    padding-bottom: 10px;
+  }
+  .events p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .family {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .family img {
+    max-width: 25%;
+    padding-bottom: 10px;
+  }
+  .family p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .masks {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .masks img {
+    max-width: 20%;
+    padding-bottom: 10px;
+  }
+  .masks p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+}
+/* End Of Citizen */
+
+/* Education */
+@media (max-width: 2500px){
+  .edu {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .edu img {
+    max-width: 55%;
+    padding-bottom: 10px;
+  }
+  .edu p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .health {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .health img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .health p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .future {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .future img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .future p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .learning {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .learning img {
+    max-width: 40%;
+    padding-bottom: 10px;
+  }
+  .learning p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+}
+@media (max-width: 1367px){
+  .edu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .edu img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .edu p {
+    margin-left: 1em;
+    font-size: 20px;
+  }
+  .health {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .health img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .health p {
+    margin-left: 1em;
+    font-size: 20px;
+  }
+  .future {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .future img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .future p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .learning {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .learning img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .learning p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+}
+/* End Of Education */
+
+/* Economy */
+@media (max-width: 1367px){
+  .econ {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .econ img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .econ p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .market {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .market img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .market p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .gov {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .gov img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .gov p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .savings {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .savings img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .savings p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+}
+@media (max-width: 2500px) {
+  .econ {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .econ img {
+    max-width: 40%;
+    padding-bottom: 10px;
+  }
+  .econ p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .market {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .market img {
+    max-width: 25%;
+    padding-bottom: 10px;
+  }
+  .market p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .gov {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .gov img {
+    max-width: 40%;
+    padding-bottom: 10px;
+  }
+  .gov p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .savings {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .savings img {
+    max-width: 20%;
+    padding-bottom: 10px;
+  }
+  .savings p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+}
+/* End Of Economy */
+
+/* Business */
+@media (max-width: 2500px) {
+  .business {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .business img {
+    max-width: 30%;
+    padding-bottom: 10px;
+  }
+  .business p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .closures {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .closures img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .closures p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .customers {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .customers img {
+    max-width: 25%;
+    padding-bottom: 10px;
+  }
+  .customers p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .employees {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .employees img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .employees p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+}
+@media (max-width: 1367px){
+  .business {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .business img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .business p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .closures {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .closures img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .closures p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .customers {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .customers img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .customers p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+  .employees {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 45px;
+  }
+  .employees img {
+    max-width: 98%;
+    padding-bottom: 10px;
+  }
+  .employees p {
+    margin-left: 1em;
+    font-size: 25px;
+  }
+}
+/* End Of Business */
+iframe {
+  width: 55%;
+  height: 800px;
+}
+.iframe-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align:center;
+}
+.SecretLink {
+  display: inline-block;
+}
+video {
+  padding-top: 15px;
+}
